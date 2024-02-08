@@ -1,0 +1,101 @@
+*{
+    margin: 0 ;
+    padding: 0;      
+}
+
+ul{
+    display: flex;
+    justify-content: right;
+    list-style: none;    
+}
+
+li{
+    margin: 1rem;
+}
+
+img{
+    display: flex;
+    align-items: left;
+}
+
+/* --- MENU ---*/
+body > main > nav {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;    
+    background-color: #130e26;
+    margin:40px;
+    border-radius:16px;
+    padding:10px
+}
+
+body > main > nav > div  {        
+    display: flex;
+    align-items: center;
+} 
+
+li > a {    
+    padding: 8px;
+    margin: 2px;    
+    text-decoration: none;
+    color: white;
+}
+
+li > a:hover{
+    color: gray;
+}
+
+li > img {
+    border-radius: 100px;
+    width: 35px;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+}
+
+/* ---- SALUDOS Y AVATAR  */
+body > main > div  {  
+    border-color: brown;
+    border-style: solid;
+    display: flex;
+    justify-content:space-between;
+    margin: 40px
+}
+
+
+body > main > div > div {  
+    border-color: brown;
+    border-style: solid;
+} 
+
+#centro_lado_izquierdo{    
+    height: 400px;
+    padding: 30px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+/* centro_lado_izquierdo > div { */
+
+#saludos {
+    margin-top: 80px;
+}
+
+#centro_lado_izquierdo >  h1  {
+    font-size: 55px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#linkspersonales{
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;    
+}
+
+#linkspersonales > img{
+    padding: 4px;
+    
+}
