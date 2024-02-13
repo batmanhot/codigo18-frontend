@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    background: #c3e3e6;  
+  }
+  
+  input,
+  button {
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 50px;
+  }
+  
+  form {
+    display: flex;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    gap: 30px;
+    width: 800px;
+  }
+  
+  form > div {
+    flex: 1;
+  }
+  
+  .container-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f3f8fb;
+  }
+  
+  .container-input > input {
+    border: none;
+    outline: none;
+    text-align: right;
+    background-color: transparent;
+  }
+  
+  .text-title {
+    font-size: 14px;
+    color: #717978;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .container-percentage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.9%;
+  }
+  
+  .container-percentage > * {
+    width: 30%;
+    margin-bottom: 4.9%;
+  }
+  
+  .container-percentage > button {
+    background-color: #00474b;
+    color: #fff;
+    padding: 7px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .container-calculo{
+    /* border-color:red;
+    border-style: solid; */
+  }
+
+
+  .container-calculo-pantalla{
+    padding: 30px;
+    margin: 20px;
+    border-radius: 16px;
+    background: #00393c;
+  }
+
+  .container-calculo-datos{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .container-calculo-datos > div > p {
+    color: #f3f8fb;
+    font-size: 13px;
+  }
+
+  #container-calculo-datos-span{
+    font-size: 10px;     
+  }
+
+  #container-calculo-datos-numero{
+    font-size: 35px; 
+    color: #35b39b
+  }
+
+  .container-botonreset{ 
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin-top: 125px;
+  }
+
+  .container-botonreset > button{
+    width: 300px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    border-style: none;
+    background: #35b39b;
+    color: #00474b;    
+    padding: 7px;
+  }
