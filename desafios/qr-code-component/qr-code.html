@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">  
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+
+    <!-- background-color: hsl(218, 44%, 22%); -->
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body { 
+
+            height: 100vh;
+            background-color: hsl(212, 45%, 89%);
+        } 
+
+        .cuerpo{
+            display: flex;            
+            justify-content: center;
+            justify-items: center;
+        }
+
+        /* .attribution a { 
+            color: hsl(228, 45%, 44%); 
+        } */
+
+        .card{
+            /* border-style: solid; */
+            border-radius: 16px;
+            background-color: white;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 20px gray
+        }
+
+       .QR {
+            display: flex;
+            justify-content: center;
+            border-radius: 16px;
+            padding: 20px;  
+        }
+
+        .QR > img {
+            width: 330px;
+            border-radius: 16px;
+        }
+
+        .titulocard{
+            color: hsl(218, 44%, 22%);
+            font-family: "Outfit", sans-serif;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 10px;   
+            padding: 7px;          
+
+        } 
+        
+        .parrafo {
+            font-size: 15px;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            padding: 7px;        
+            color: gray
+
+
+        }
+
+        .cardpie{            
+            padding-bottom: 35px;
+
+        }
+
+        .div-center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); 
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="div-center">
+            <div class="card">             
+                <div class="QR">
+                    <img src="../qr-code-component/images/image-qr-code.png" alt="">
+                </div> 
+
+                <div class="cardpie">
+                    <h2 class="titulocard">Improve your front-end <br> skills by building projects</h2>
+                    <p class="parrafo">Scan the QR code to visiti FrontEnd <br> Mentor and take your coding skills to <br> the next level</p>    
+                </div>        
+
+            </div>
+        </div>
+    </main>    
+</body>
+
+</html>
