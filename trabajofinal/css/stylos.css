@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box;   */
+}
+
+/* ----- body ------- */
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;    
+}
+
+/* --- contenedor general --------- */
+
+.container{
+    width: 90%;
+	max-width: 1200px;
+    margin: 0px auto;
+}
+
+
+.container-encabezado{
+    display: flex;
+    flex-wrap: wrap; 
+
+    align-items: center; 
+    justify-content: center;    
+
+}
+
+.container-icono {  
+    position: absolute;
+    top: 5%;    
+    text-align: center;
+
+}
+
+.container-icono > img{  
+    /* border-style: solid;
+    border-color: antiquewhite;
+    border-width: 2px; */
+    width: 150px;
+    border-radius: 50%;
+}
+
+.container-icono-titulo{
+    margin-top: 20px;
+    color: antiquewhite; 
+    text-align: center;   
+}
+
+
+.container-icono-titulo-horario{
+    margin-top: 10px;
+    background-color: green;
+    color: antiquewhite; 
+    text-align: center;   
+    padding: 7px;    
+}
+
+.cabecera{    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    object-fit: cover;   
+}
+
+.cabecera > img { 
+    width: 360px;       
+    height: 360px;
+}    
+
+.carta{    
+    padding: 12px; 
+    width: 360px;         
+}
+
+.carta > h2 {
+    text-align: center; 
+    font-weight: bold;
+    font-family: "IM Fell Great Primer", serif; 
+}
+
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;    
+    gap: 10px;
+    align-items: center;  
+    justify-content: center;     
+}
+
+
+.card {
+    /* border-style: solid;  */
+    width: 470px;
+    display: flex;      
+    flex-direction: column; 
+    padding: 15px;    
+}
+
+.card-presentacion{
+    display: flex;        
+    gap: 5px;
+}
+
+.card-img > img{
+    width: 110px;
+    object-fit: cover;    
+}
+
+.card-compras-botonagregar {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.card-compras-botonagregar > img{
+    height: 25px; 
+    width: 25px;
+    object-fit: cover;      
+    
+}   
+
+.card-texto{    
+    width: 210px;
+    text-align: justify;
+}
+
+.card-texto > p{
+    font-size: 13px;        
+}
+
+.card-texto-titulo{
+    font-weight: bold;
+}
+
+.card-datos {
+    display: flex;      
+    justify-content: space-between;
+    align-items: center;
+}
+.card-precio{
+    display: flex;      
+    align-items: center;    
+}
+
+.card-precio > p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-compras > img{
+    width: 25px;
+}
+
+
+.container-pie{
+    display: flex;
+    flex-wrap: wrap;     
+    gap: 10px; 
+    align-items: center;   
+    justify-content: center;   
+}
+
+ .pie {
+    font-family: "IM Fell Great Primer", serif;
+    padding: 12px;    
+    background-color: #930001;
+    color: antiquewhite; 
+    text-align: center;
+
+    margin-top: 0px;
+    margin-bottom: 10px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 337px;            
+    gap: 10px;  
+
+} 
+
+.pie >div > h4{        
+    text-align: center;
+    font-size: 18px;
+}    
+
+.pie > div > img   {
+    color: #000;    
+    width: 30px;
+}
+
+.pie > div > i   {
+    color: #000;    
+    width: 60px;
+}
+
+
+.container-carrito{        
+    position: fixed;
+    top: 25%;
+    left: 25%; 
+    
+    z-index: 9000;
+    width: 50%;
+    height: 50%;
+    border: 2px solid; 
+    background: white;    
+}    
+.vercarrito {
+    display: block;
+    position: relative;
+    padding: 20px 0 0 0;    
+    text-align: center;  
+}
+
+#lista-carrito{
+    border: 2px solid;        
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.lista-carrito-resumen{
+    display: flex;
+    justify-content:space-around;
+}
+
+
+table, th, td {
+    border: 1px solid;        
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: maroon;
+    color: white;
+}
+
+/* -- dando tamaño a las columnas del body del carrito */
+th:nth-child(1) {    
+    width: 10%    
+}
+th:nth-child(2) {    
+    width: 20%    
+}
+th:nth-child(3) {    
+    width: 7%    
+}
+th:nth-child(4) {    
+    width: 8%    
+}
+th:nth-child(5) {    
+    width: 8%    
+}
+th:nth-child(6) {    
+    width: 5%    
+}th:nth-child(7) {    
+    width: 5%    
+}
+
+.card-compras-botonvercarrito{
+    width: 120%;
+    height: 40px;
+    color: antiquewhite; 
+    background-color: #930001;
+    display: flex;    
+    gap: 10px;
+    border: none;            
+    cursor: pointer;
+}
+
+#contador-items{
+    font-family: "Arial", serif;    
+    font-size: 12px;
+    color: greenyellow;
+    /* display: none; */
+    display: block;
+}
+
+/* ------- VENTANA MODAL  */
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in; 
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 60%;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
+/* ---------- FIN DE VENTANA MODAL  -------------------------*/
+
+.button {    
+    background-color: maroon;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button-carrito {    
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;    
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #04AA6D; /* Green */
+    color: white;
+  }
+
+.button-carrito:hover {    
+    background-color: #46a049;
+    color: white;
+    border-radius: 70px;
+}
+
+#carta{
+    display: flex;
+    justify-content: center;    
+}
+
+#carta-img{
+    width: 20%;
+    height: 20% ;
+    text-align: center;
+}
+
+#pedido{
+    display: flex;    
+    justify-content: center;
+}
+
+#mensaje {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+#datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#cuerpo{
+    border-width: 4px;    
+    background-color: burlywood;
+    box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+#confirmacion{
+    text-align: center;
+}
+
+#body_cierre{
+    height: 90vh;
+     display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;     
+} 
+
+
+#cuerpo_modal{
+    background-image: url("../assets/img/fondo_restaurante.png");
+    opacity: 90%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;          
+    width: 50%;
+    padding: 20px;
+} 
+
+
+/* ---- DESKTOP  */
+@media (min-width: 1280px) {
+    .card-texto{    
+        width: 350px;    
+    }
+
+    .carta {
+        /* border-style: solid; */
+        width: 993px;
+    }
+
+    .cabecera > img {        
+        width: 1022px;                       
+        object-fit: contain;
+    }  
+
+    .pie {        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 998px;            
+        gap: 10px;      
+    }
+    
+    .pie >div > h4{        
+        text-align: center;
+        font-size: 18px;
+        
+    }
+    .pie > div> img {
+        margin : 10px auto;        
+    }
+
+} 
