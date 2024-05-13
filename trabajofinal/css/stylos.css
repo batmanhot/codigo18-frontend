@@ -224,7 +224,7 @@ body {
 
 .lista-carrito-resumen{
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
 }
 
 
@@ -267,6 +267,8 @@ th:nth-child(6) {
     color: antiquewhite; 
     background-color: #930001;
     display: flex;    
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     border: none;            
     cursor: pointer;
@@ -275,8 +277,7 @@ th:nth-child(6) {
 #contador-items{
     font-family: "Arial", serif;    
     font-size: 12px;
-    color: greenyellow;
-    /* display: none; */
+    color: greenyellow;    
     display: block;
 }
 
@@ -301,7 +302,7 @@ th:nth-child(6) {
 	pointer-events: auto;
 }
 .modalDialog > div {
-	width: 60%;
+	width: 70%;
 	position: relative;
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;
@@ -336,16 +337,21 @@ th:nth-child(6) {
 .close:hover { background: #00d9ff; }
 /* ---------- FIN DE VENTANA MODAL  -------------------------*/
 
+.lista-carrito-botones{
+    display: flex;
+    justify-content:center;
+}
+
 .button {    
     background-color: maroon;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 12px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    display: inline-block;  
+    font-size: 13px;
+    margin: 2px 2px;
     cursor: pointer;
     transition-duration: 0.4s;
 }
@@ -379,8 +385,8 @@ th:nth-child(6) {
 }
 
 #carta-img{
-    width: 20%;
-    height: 20% ;
+    width: 40%;
+    height: 40% ;
     text-align: center;
 }
 
@@ -394,6 +400,8 @@ th:nth-child(6) {
     align-items: center;
     flex-direction: column; 
     justify-content: center;
+    padding: 20px;
+
 }
 
 #datos {
@@ -412,10 +420,12 @@ th:nth-child(6) {
 
 #confirmacion{
     text-align: center;
+    margin-top: 20px;
 }
 
 #body_cierre{
-    height: 90vh;
+    /* height: 50vh; */
+    padding: 10px;
      display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -434,6 +444,67 @@ th:nth-child(6) {
     padding: 20px;
 } 
 
+
+/* #lista-carrito-cuerpo{
+    border-style: solid;    
+} */
+
+/* .lista-carrito-div{
+    border-style:solid;
+    border-width: 3px;
+    border-color: #fff;
+} */
+
+#lista-carrito-cuerpo-horizontal{
+   display: flex;        
+   justify-content: space-between;    
+}   
+
+#lista-carrito-cuerpo-titulo-horizontal{
+    display: flex;                
+ }
+
+#lista-carrito-cuerpo-titulo{
+    font-weight: bold;
+    text-align: left;
+    color:  #930001;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif */
+}
+
+
+#lista-carrito-cuerpo-cantidad, #lista-carrito-cuerpo-precio{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+}
+
+ form {
+    width: 270px;
+    margin: auto;     
+  }
+
+  input[type=text], input[type=tel], input[type=email] {   
+    width: 81%;
+    padding: 10px 18px;
+    margin: 4px;    
+  }
+
+
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%}
+
+
+/* .contacto{
+    display: none;
+} */
 
 /* ---- DESKTOP  */
 @media (min-width: 1280px) {
@@ -468,4 +539,7 @@ th:nth-child(6) {
         margin : 10px auto;        
     }
 
+    .modalDialog > div {
+        width: 30%;
+    }
 } 

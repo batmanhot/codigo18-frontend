@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&family=Inter:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script>   -->
         
     <style>
         .material-symbols-outlined {
@@ -297,8 +299,8 @@
                         <div>                                                    
                             <button class="card-compras-botonvercarrito" onclick="window.location.href='#openModal'">
                                 <h1>VEA SU CARRITO</h1>                            
-                                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"><br></i>                                    
-                                <h4 id="contador-items">( 0 )</h4>
+                                <!-- <i class="fa fa-shopping-cart fa-1x" aria-hidden="true"><br></i>                                     -->
+                                <h2 id="contador-items">( 0 )</h2> 
                             </button>                       
                         </div>
                         
@@ -314,15 +316,14 @@
 
          <!-- -------- MODAL DE VER CARRITO DE COMPRAS DEL PEDIDO ----------- -->
 
-        <div id="openModal" class="modalDialog">
+        <!-- <div id="openModal" class="modalDialog">
             <div>
                 <a href="#close" title="Close" class="close">X</a>
 
                 <div class="vercarrito">
                     <h2>CARRITO DE COMPRAS  <i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i>  </h2>                 
                     <hr>
-                    <br>
-                    <!-- lista-carrito tbody -->
+                    <br>                    
                     <div id="carrito">                                           
                         <table id="lista-carrito" class="u-full-width">
                             <thead>
@@ -337,8 +338,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody id="lista-carrito-cuerpo"> 
-                                <!-- -- Aqui van los items seleccionados -- -->
+                            <tbody id="lista-carrito-cuerpo">               
                             </tbody>
 
                         </table>
@@ -362,12 +362,122 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <!-- -------- MODAL CARRITO VERSION CUADRADO  ----------- -->
+
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a id="cerrarmodal" href="#close" title="Close" class="close">X</a>
+
+                <div class="vercarrito">
+                    <!-- <h3>MI CARRITO DE COMPRAS <i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> </h3>                     -->
+                    <h3>MI CARRITO DE COMPRAS</h3>                    
+                    <hr>
+                    
+                    <div id="carrito">             
+                        <div id="lista-carrito-cuerpo">
+                            <!-- -- aqui va -- -->
+                        </div>                                                
+                        <hr>
+                        <br>
+
+                        <div class="lista-carrito-resumen"> 
+                            <h4 id="lista-carrito-resumen-Items"></h4>
+                            <h4 id="lista-carrito-resumen-Pedido"></h4> 
+                        </div>
+
+                        <br>
+                        <hr>
+                        <!-- --------------------------------------------------------------- -->
+                        <div id="contacto" class="contacto">                                              
+                            <!-- <form action="./cierre.html" method="GET" > -->
+                            <form action="#openCierre" method="GET" >  
+                            <!-- <form action="" method="" >                     -->
+                                <h3>DATOS DEL CONTACTO</h3>                                    
+                                    <hr>
+                                    <div>                                        
+                                        <input type="text" id="first_name" placeholder="Nombres" required />
+                                    </div>
+        
+                                    <div>                                
+                                        <input type="text" id="last_name"  placeholder="Apellidos" required />
+                                    </div>
+                                    <div>                                
+                                        <input type="text" id="direccion" placeholder="Direccion: Av Los Corales 123" required />
+                                    </div>  
+                                    <div>                                
+                                        <input type="tel" id="phone" placeholder="Celular: 912345678" required />
+                                    </div>                
+                                    <div>                                
+                                        <input type="text" id="referencia" placeholder="referencia del lugar, Calle, esquina, al frente de ..." />
+                                    </div>                            
+                                    <div>
+                                        <input type="email" id="email"  placeholder="email: juanperez@dominio.com" required />
+                                    </div>     
+                                    <br>
+                                    <!-- <h1 id="datosenvio-totalpedido" class="text-center text-2xl font-bold">TOTAL PEDIDO S/. </h1>             -->
+                                    <hr>
+
+                                    <div class="lista-carrito-botones">                                        
+                                        <button  id="boton-envio" class="button" onsubmit="SaveStorageDatosEnvio" type="submit">                                            
+                                            Enviar
+                                        </button>
+                                        <!-- <a href="./modal.html" title="Registrando Pedido" target="_blank" rel="nofollow" id="aceptar-carrito" class="button">Aceptar</a> -->
+                                        <a href="#" id="cerrar-carrito" class="button">Cerrar</a>
+                                        <a href="#" id="vaciar-carrito" class="button">Vaciar</a>                        
+                                    </div>
+                            </form>         
+                        </div>
+
+                        <!-- ------------- aQQ NO TOCAR -------------- -->
+                        
+                    </div>
+                </div>                
+            </div>            
+        </div>
+
+        <!-- ---- VENTANA MODAL DE CIERRE ---- -->
+        <!-- <a id="lanzadorCierre"  href="#openCierre">Lanzar el modal</a>  -->
+        
+        <!-- <a href="#openModal">Lanzar el modal</a> -->
+
+        <div id="openCierre" class="modalDialog">
+            <div>                
+
+                <a id="cerrarmodalCierre" href="#close" title="Close" class="close">X</a>
+
+                <div id="body_cierre">                    
+                    <div id="cuerpo">
+                        <h3 id="confirmacion">CONFIRMACION DE PEDIDO</h3><br>
+                        <div id="carta">        
+                            <img id="carta-img" src="./assets/img/envelope1.png" alt="" srcset="">
+                        </div>
+                
+                        <div id="mensaje">                            
+                            <h5>Se envio a su bandeja de correo la confirmación, su pedido debe estar llegando en el plazo mas breve</h5>                                                        
+                        </div>                        
+                        <div id="pedido">
+                            <h3>PEDIDO Nro. 1326x</h3>
+                        </div>
+                        <br>
+                        <div id="datos">
+                            <p id="cliente">cliente </p>
+                            <p id="direccion">direccion</p>
+                            <p id="email">email </p>
+                            <p id="hora">hora </p>
+                        </div>
+                        <br>
+                    </div>                
+            </div>            
         </div>
 
         <!-- --- script fontawesome  -->
         <script src="https://kit.fontawesome.com/73bf2341bc.js" crossorigin="anonymous"></script>
         <script src="./js/app.js"></script>        
         <script src="./js/bd.js"></script>
+        <script src="./js/cierre.js"></script> 
+        <!-- <script src="./js/envio.js"></script> -->
         <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 </body>
 </html>

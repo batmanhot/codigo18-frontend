@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enviar Correo</title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "batmanponte@gmail.com",                           
+                Password: "__%%%jpCMH094__###",
+                To: 'batmanponte@gmail.com',
+                From: "sender@email_address.com",
+                Subject: "Enviando correo con JavaScript",
+                Body: "¡Fácil, verdad?",
+            })
+            .then(function (message) {
+                alert("Correo enviado exitosamente");
+            });
+        }
+    </script>
+    <form method="post">
+        <input type="button" value="Enviar Correo" onclick="sendEmail()" />
+    </form>
+</body>
+</html>

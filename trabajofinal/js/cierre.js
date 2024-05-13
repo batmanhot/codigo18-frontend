@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", load, false);
 
 // Cargar valores iniciales
 
+
 function load(){
-    
     RestoreStorageDatosEnvio()
-}
+ }
 
 function addZero(i) {
     if (i < 10) {i = "0" + i}
@@ -30,26 +30,30 @@ function fechayhoraactual(){
 }
 
 
-function RestoreStorageDatosEnvio(){     
-    
+function RestoreStorageDatosEnvio(){         
     let recogeDatos = JSON.parse(localStorage.DatosCliente);
+    debugger
 
     console.log(recogeDatos)
 
     recogeDatos.forEach(dato => {                
-        console.log(dato);
-        console.log(dato.nombre);
-        console.log(dato.apellidos);
-        console.log(dato.email);
-        console.log(dato.direccion);
+        
+        // console.log(dato.nombre);
+        // console.log(dato.apellidos);
+        // console.log(dato.email);
+        // console.log(dato.direccion);
 
         let nombrescliente=dato.nombre+' '+dato.apellidos
+        let vdireccion = dato.direccion
+        let vemail = dato.email
         
-        horario = fechayhoraactual()
+        horario = fechayhoraactual()        
+        document.getElementById("cliente").innerHTML   =  `<h3>${nombrescliente}</h3>`
+        document.getElementById("hora").innerHTML      =  `<h3>${horario}</h3>`        
+        // a = document.querySelector("#direccion").innerHTML =  `<h3>${vdireccion}</h3>`
+        // a = document.getElementById("direccion").innerHTML =  `<h3>${vdireccion}</h3>`
+        // b = document.getElementById("email").innerHTML     =  `<h3>${vemail}</h3>`
 
-        document.getElementById("cliente").innerHTML =  `<h3>${nombrescliente}</h2>`
-        document.getElementById("direccion").innerHTML = `<h3>${dato.direccion}</h2>`
-        document.getElementById("email").innerHTML =   `<h3>${dato.email}</h2>`        
-        document.getElementById("hora").innerHTML =   `<h3>${horario}</h2>`        
+                
     
     })};
